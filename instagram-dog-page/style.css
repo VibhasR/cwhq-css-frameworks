@@ -1,0 +1,20 @@
+.row {
+  padding: 10px 0 10px 0;
+}
+
+#logo-container > img {
+  width: 120px;
+}
+
+#icons-container > img {
+  width: 28px;
+  margin: 8px;
+}
+
+#icons-container {
+  text-align: right;
+}
+
+#search-container {
+  margin: 5px;
+}
