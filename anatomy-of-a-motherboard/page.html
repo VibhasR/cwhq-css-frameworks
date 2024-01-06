@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anatomy of motherboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <!--
+Exercise 1: Link the bootstrap framework in your project
+Exercise 2: Create a popover from the data attributes
+Exercise 3: Let's add another popover
+Exercise 4: Make popover close when clicked somewhere else
+-->
+
+    <div class="container">
+      <button type="button" id="mother-board">
+        <img src="images/mother-board.png">
+      </button>
+
+      <button type="button"
+              id="battery"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus hover"
+              data-bs-placement="right"
+              title="CPU Battery"
+              data-bs-content="The memory battery (aka motherboard, CMOS, real-time clock (RTC), clock battery) is generally a CR2032 lithium coin cell. This cell battery has an estimated life of 3 years when power supply unit (PSU) is unplugged or when the PSU power switch is turned off."
+              >
+        <img src="images/battery.png">
+      </button>
+
+      <button type="button"
+              id="ethernet"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus hover"
+              data-bs-placement="left"
+              title="Ethernet Port"
+              data-bs-content="An Ethernet port is an opening on a computer in which you can plug an Ethernet cable. It connects wired network hardware to an Ethernet LAN."
+              >
+        <img src="images/ethernet.png">
+      </button>
+
+      <button type="button"
+              id="audio"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus hover"
+              data-bs-placement="right"
+              title="Audio Port"
+              data-bs-content="A computer's audio ports link the computer's sound hardware with your speakers, microphone, headsets or other audio equipment. Every computer motherboard has at least a few basic audio ports built in, allowing you to connect stereo speakers and a microphone.">
+        <img src="images/audio.png">
+      </button>
+
+      <button type="button"
+              id="RAM-slots"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus hover"
+              data-bs-placement="right"
+              title="RAM Slots"
+              data-bs-content="Computers use multiple memory storage systems to store and retrieve data. One such memory system called random access memory (RAM) is connected to the computer motherboard via RAM slots.">
+        <img src="images/RAM-slots.png">
+      </button>
+
+      <button type="button"
+              id="heat-sink"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus hover"
+              data-bs-placement="right"
+              title="Heat Sink"
+              data-bs-content="A heat sink is a thermal conductive metal device designed to absorb and disperse heat away from a high temperature object such as a computer processor. Usually heat sinks are outfitted with built-in fans to help keep both the CPU and the heat sink at an appropriate temperature."
+              >
+        <img src="images/heat-sink.png">
+      </button>
+
+      <button type="button"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus hover"
+              data-bs-placement="left"
+              title="CPU Fan"
+              data-bs-content="A CPU fan or any other fan inside, or attached to, a computer case used for active cooling. Fans are used to draw cooler air into the case from the outside, expel warm air from inside and move air across a heat sink to cool a particular component."
+              id="processor-fan">
+        <img src="images/processor-fan.png">
+      </button>
+
+    </div>
+
+    <div class="text-center">
+      <h1 class="display-3"> Anatomy of Motherboard</h1>
+      <p>Hover over the motherboard to see details</p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">       </script>
+    <script>
+      var buttonList = document.getElementsByTagName('button');
+      for (button of buttonList) {
+        var popover = new bootstrap.Popover(button, {container: '.container'});
+      }
+
+    </script>
+  </body>
+
+</html>
+
+<!--
+Homework 1: Complete this anatomy by adding the popover for every image.
+
+In this file,
+- In the remaining button tags, set the data-bs-toggle attribute to popover.
+- Set the title attribute to the title of popover.
+- Set the data-bs-content attribute to the content of popover.
+- Go through the documentation to customize the popover as you like.
+-->
